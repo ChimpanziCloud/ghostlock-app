@@ -110,10 +110,3 @@ jobs:
       - uses: actions/download-artifact@v8
         with:
           path: artifacts
-
-      - name: Post to Telegram
-        env:
-          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          BOT_API_LINK: ${{ secrets.BOT_API_LINK }}
-        run: bash .github/scripts/post_telegram.sh
